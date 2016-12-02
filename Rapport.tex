@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{titlesec, blindtext}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{wrapfig}
+
+\lstset{extendedchars=\true}
+\lstset{inputencoding=ansinew}
+\lstset{literate=%
+{é}{{\'e}}1
+{à}{{\`a}}1
+{ø}{{\o}}1
+{Æ}{{\AE}}1
+{Å}{{\AA}}1
+{Ø}{{\O}}1
+}
+\lstdefinestyle{MyFrame}{backgroundcolor=\color{yellow},frame=shadowbox}
+\begin{document}
+
+
+\begin{titlepage}
+
+    \begin{flushleft}
+        \includegraphics[scale=0.3]{logo_um.png}
+    \end{flushleft}
+
+    \centering
+	{\scshape\large Université de Montpellier \par}
+	\vspace{0.2cm}
+	{\scshape\large - \par}
+	\vspace{0.2cm}
+	{\scshape\large Faculté des Sciences \par}
+	\vspace{5cm}
+	{\huge\bfseries Projet Base de Données Avancées\par}
+	\vspace{0.5cm}
+	{\huge\bfseries Entrepôt de données : Produits du terroir\par}
+	\vspace{5cm}
+	{\Large\itshape Thomas Lefebvre\par}
+	\vspace{0.5cm}
+	{\Large\itshape Rudy Bardout\par}
+	\vspace{0.5cm}
+	{\Large\itshape Hani Guenoune\par}
+	\vspace{0.5cm}
+	{\Large\itshape Yasin Mohammed\par}
+	\vfill
+	{\large \today\par}
+\end{titlepage}
+\newpage
+
+\tableofcontents
+\newpage
+
+ \section{Introduction}
+
+
+Le sujet auquel nous nous sommes penchés lors du mini-projet objet-relationnel proposait d’éventuellement asseoir une application de commandes de plateaux repas constitués de produits du terroir. 
+
+Nous adoptons dans le présent document une vision d’entreprise. Les activités d’un organisme dans son terrain d’expertise se déclinent en un corpus important de données regroupant l’historique de sa production et de ses évènements passés (faits, ventes, clients, produits…).
+L’évolution du volume de ces données est parallèle à un savoir-faire également grandissant au fil de son expérience. La rapidité de cette évolution dépend de la capacité des organismes à tirer profit de leurs expériences et de la qualité des décisions prises par sa direction.
+
+Il s’agit maintenant de supposer la prospérité des services de livraison du produit du terroir, l’analyse suivante consiste à proposer les potentielles directions stratégiques que pourraient emprunter les entreprises proposant le service en question afin d’améliorer leurs productivités, ainsi que les analyses à effectuer pour mener à bien cette démarche.
+
+ \section{Traitements }
+
+Les données que nous aurons besoin de stocker dans l’entrepôt concernent : 
+*Les plateaux commandés : Ceux-ci sont stockés dans la table repas de notre base de données.
+*Clients ayant passé des commandes de plateaux : Tuples de la table Client.
+*Date : Il s’agit de la dimension temps (Jour, mois, années) permettant de poser un suivi des activités du business à travers le temps.
+Afin de permettre des analyses plus détaillées, nous choisissons d’étendre le modèle du premier projet en ajoutant les notions de Fournisseur et du Local. Pour souligner l’hétérogénéité des données des entrepôts nous supposons que ces ajouts proviennent de sources de données différentes ;
+*Livreur : Informations relatives aux livreurs de produits du terroir.
+ *Locaux : Sortes de magasins servant à recueillir, stocker, et envoyer les commandes aux domiciles des clients.
+Question 1 : Actions / Opérations : 
+Pour parvenir à des stratégies cohérentes et prometteuses d’évolution, nous proposons un petit ensemble de démarches décisionnelles stratégiques (opérations). Pour chacune de ces démarches, une entité dirigeante fictive propose un certain nombre d’idées d’améliorations.
+Il s’agira ensuite de déduire les faits et les traitements (analyses) à partir de ces propositions.
+a)	Opération de communication et marketing: 
+Ce volet vise à promouvoir les services de l’entreprise, l’intérêt étant de cibler une clientèle de plus en plus grande, ainsi que de fidéliser les clients déjà existants de l’entreprise.
+1-Communication : Les dirigeants de l’entreprise souhaiteraient organiser des foires de dégustation des différents produits du terroir, et en profiter pour parler de leur entreprise.  Pour une meilleure efficacité de cette opération de communication, ils se demandent quelles sont les régions prioritaires où pourront avoir lieux ces foires (Les régions les moins intéressées par la restauration du terroir), et quels sont les produits les moins connus des consommateurs par région.
+2-Marketing : Afin d’améliorer les ventes et les chiffres d’affaire de l’entreprise, les idées suivantes sont proposées : 
+-Création de menus (plateaux) formés des assortiments et associations des produits les plus populaires (couple, triplet de produits) auprès des clients par région et par saison.
+-Proposer des offres d’abonnement/réductions aux clients les plus fidèles.
+-Création de menus à moindre prix pour une certaine tranche d’âge de clients.
+b)	Opération ouverture de nouveaux locaux en optimisant les trajets de livraison : 
+Une équipe de recherche développe des solutions d’optimisation des trajets du service de livraison. En complément aux heuristiques développées, ils proposent afin de réduire le coût engendré par la livraison des produits, les dispositions suivantes : 
+Pour chaque région, établir les nouveaux locaux à des emplacements proches des fournisseurs et du périmètre le plus desservi (clients les plus souvent livrés)
+c)	Opération optimisation stockage des produits avant leurs livraisons : 
+L’équipe des stocks suggère également d’identifier les produits les plus demandés par région afin de gérer les approvisionnements (décider des quantités à stocker), et ainsi éviter l’épuisement de ces produits.
+Question 2 : Requêtes analytiques :  
+Opération communication et marketing : 
+Quelles sont les villes ayant le moins d’habitants qui ont déjà commandé un plateau repas ? (Ou les villes dont les habitants n’ont jamais commandé de plateaux repas)
+Quels sont les produits les moins commandés par régions ? 
+Quels sont les produits les plus souvent associés dans une commande ?
+Quels sont les produits commandés par les clients ayant un âge compris dans une certaine tranche.
+
+Opération nouveaux locaux/optimisation trajets et route 
+Quels sont les clients effectuant des commandes régulièrement (Tous les x jours) ?  
+Quels sont les fournisseurs dont les produits sont les plus appréciés par région ?
+Opération optimisation stockage : 
+Quels sont les produits disponibles dans un local donné ?
+Quel jour un local de stockage donné a été saturé ? 
+Quelle est la capacité restante (aujourd’hui) d’un local donné ?
+Question 3 : Ordonner les opérations selon leurs importances :
+a)-Commandes/Ventes de plateau: 
+c)-Approvisionnement et Stockage :
+b)-Ouverture de nouveaux locaux de stockage 
+II-Conception
+Question 4-Les deux opérations les plus importantes : 
+a)-Commandes/Ventes de plateau
+c)-Approvisionnement et Stockage 
+
+
+
+
+
+
+
+
+Question 5- Datamarts opération a : 
+Les mesures : Prix total et Bénéfice_net sont toutes deux additives.
+
+
+Datamart opération c :
+ 
+
+
+Il s’agit d’un snapshot périodique.
+La mesure de capacité restante est semi-additive.
+
+Question 7 : Est-il  possible de répondre aux requêtes ? 
+Le datamart peut être interrogé par les requêtes prévues.
+
+
+
+
+\end{document}
