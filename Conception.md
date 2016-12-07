@@ -1,5 +1,7 @@
-##Identifying the business process (Actions/opérations) 
-Nous fixons définitivement les business process aux deux suivants : 
+#Général
+
+##Identifying the business processes (Actions/opérations) 
+Nous fixons définitivement les business processes aux deux suivants : 
 - Commandes/ventes (Datamart1): Comprendre quels produits sont commandés durant quelles périodes dans quelles régions sous quelles conditions de tarification (promotions/remises).
 
 - Stocks/inventaire (Datamart2): Retracer l'état des stocks à travers le temps (Produits présents dans l(es)'entrepôt(s) à une date donnée).
@@ -12,21 +14,22 @@ Une ligne crée / produit commandé ( Within a set of orders / Parmis un ensembl
                     La flexibilité analytique : Les démarches analytiques requièrent des coupes détaillées du cube.
 
 -Datamart2 : 
-Periodical (Daily/monthly ?) snapshots of products present in the warehouse.
+Periodical (Daily/weekly/monthly ?) snapshots of products present in the warehouse.
 
+#Vente Business Process/ DATAMART 1 : 
 ##Table de faits Vente et mesures :
 - Attributs : 
 
     - Clé table plateau (Degenerative Dimension key)
     - Clé primaire :  
     
-        - Combinaison (Clé table plateau, Code produit)
+        - Combinaison (Clé table plateau, Clé produit)
 
 - Mesures : 
-    - Prix de vente.
-    - coût réel.
-    - bénéfice net.
-    - Pourcentage de bénéfice (Nominateur et dénominateur stockés séparement)
+    - Prix de vente (Additive).
+    - coût réel (Additive).
+    - bénéfice net (Additive).
+    - Pourcentage de bénéfice (Nominateur et dénominateur stockés séparement) (Nonadditive).
     
 ##Dimensions : (Détaillées afin de permettre les drill-up)
 - Client
@@ -53,3 +56,30 @@ Ce que je comprend pour l'instant :
 Les bridge tables servent à gérer les versioning des valeurs qui changent régulièrement.
 
 - Backup solution : Si jamais on ne réussit pas à implémenter les bridge tables, on devra limiter le nombre d'allergies possibles et prévoir par exemple 3 champs d'allergies
+
+#Stocks Business Process/ DATAMART 2 : 
+
+##Table de faits Stocks et mesures :
+- Attributs : 
+
+    - Clé primaire :  
+    
+        - Combinaison des clés de toutes les dimensions.
+
+- Mesures : 
+    - Quantité (semi-additive).
+    - Capacité restante (semi-additive).
+    
+##Dimensions : (Détaillées afin de permettre les drill-up)
+
+- Produit
+- Date
+- Entrepôt 
+
+##Traitements: 
+Quelques idées de traitements seraient :  
+
+- Quelle est la quantitée de produit x dans l'entrepot y, tel mois. 
+- Quels sont les mois ou le stocks de la catégorie fromage s'épuise.
+
+	
