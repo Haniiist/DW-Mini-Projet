@@ -8,14 +8,16 @@ Entrepôt de données, produits du terroir.
     - Conception (Voir fichier Conception)
         - Identifying the business process (Ce qu'ils appellent Actions/opérations) (Fait par @Haniiist)
         - Modification de la granularité du modèle (Fait par @Haniiist)
+        - Décider des traitements à faire (Textuellement)
         - Résoudre le problème des dimensions 
         - Penser les tables ponts (@Haniiist)
         - Refaire les schémas en étoile (@Haniiist)
         - Voir pour l'utilisation des vues / "role-playing"
     - Réalisation
-        - Implémenter notre modèle corrigé
-        - Faire les requêtes
-        - Interroger notre base avec nos requêtes
+        - Implémenter notre modèle corrigé (Créations).
+        - Peupler l'entrepôt par quelques insertions.
+        - Faire les requêtes à partir des traitements.
+        - Interroger notre base avec nos requêtes.
 
 ## Disclaimer
 Ce projet s'inscrit dans la continuité du projet de base de données orientées OR.
