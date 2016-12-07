@@ -8,7 +8,7 @@ Nous fixons définitivement les business processes aux deux suivants :
 
 ##Déclaration de la granularité du modèle (Modifiée)
 -Datamart1:
-Une ligne crée / produit commandé ( Within a set of orders / Parmis un ensemble de produits commandés -> Plateau) 
+Une ligne créee / produit commandé ( Within a set of orders / Parmis un ensemble de produits commandés -> Plateau) 
 -   Justification : analytical strategies may requiere a detailed slicing operations(of the cube).
 
                     La flexibilité analytique : Les démarches analytiques requièrent des coupes détaillées du cube.
@@ -54,10 +54,7 @@ Quelques idées de traitements pour la nouvelle dimension (: Remise/promotion) s
 
 ##Allergies/Tables ponts: 
 
-Ce que je comprend pour l'instant : 
-
-Les bridge tables servent à gérer les versioning des valeurs qui changent régulièrement.
-
+Partie 3."Use a bridge table to link the 2 dimensions"--->https://dwbi1.wordpress.com/2011/03/13/dimensions-with-multi-valued-attributes/
 - Backup solution : Si jamais on ne réussit pas à implémenter les bridge tables, on devra limiter le nombre d'allergies possibles et prévoir par exemple 3 champs d'allergies
 
 #Stocks Business Process/ DATAMART 2 : 
