@@ -2,31 +2,33 @@
 
 Création de la table de faits F_commande.
 Mesures : prix_total, benefice_net.
-Dimensions : D_plateau, D_livreur, D_client, D_local, D_date.
+Dimensions : D_produit, D_remise, D_client, D_local, D_date.
 
 */
 
 CREATE TABLE F_commande
 (
-	plateau_id number,
-	livreur_id number,
+	produit_id number,
+	remise_id number,
 	client_id number,
-	local_id number,
+	--local_id number,
 	date_id number,
-	prix_potal number,
+	plateau_code number
+	prix_vente number,
+	cout_reel number,
 	benefice_net number,
-	PRIMARY KEY (plateau_id,livreur_id,client_id,livreur_id,date_id);
-	CONSTRAINT fkey_plateau_id FOREIGN KEY (plateau_id) REFERENCES D_plateau(plateau_id),
-	CONSTRAINT fkey_livreur_id FOREIGN KEY (livreur_id) REFERENCES D_livreur(livreur_id),
+	PRIMARY KEY (produit_id,plateau_code);
+	CONSTRAINT fkey_produit_id FOREIGN KEY (produit_id) REFERENCES D_produit(produit_id),
+	CONSTRAINT fkey_remise_id FOREIGN KEY (remise_id) REFERENCES D_remise(remise_id),
 	CONSTRAINT fkey_client_id FOREIGN KEY (client_id) REFERENCES D_client(client_id),
-	CONSTRAINT fkey_local_id FOREIGN KEY (local_id) REFERENCES D_local(local_id),
+	--CONSTRAINT fkey_local_id FOREIGN KEY (local_id) REFERENCES D_local(local_id),
 	CONSTRAINT fkey_date_id FOREIGN KEY (date_id) REFERENCES D_date(date_id)
 );
 
 /*
 
 Création des tables de dimensions d_<Table>.
-Tables : D_plateau, D_livreur, D_client, D_local, D_date.
+Tables : D_produit, D_remise, D_client, D_local, D_date.
 
 */
 
@@ -45,21 +47,20 @@ CREATE TABLE D_client
 	PRIMARY KEY (client_id),
 );
 
-CREATE TABLE D_livreur
+CREATE TABLE D_remise
 (
-	livreur_id number,
-	nom varchar(15),
-	prenom varchar(15),
-	adresse varchar(50),
-	code_postal varchar(5),
-	num_tel varchar(12),
-	date_Naissance Date,
-	date_Recrutement Date,
-	sexe varchar(1),
-	moyen_transport varchar(50),
-	PRIMARY KEY (livreur_id),
+	remise_id number,
+	description varchar(15),
+	code varchar(15),
+	publique varchar(50),
+	pourcentage varchar(12),
+	date_debut Date,
+	date_fin Date,
+	frequence_annuelle varchar(1),
+	portee_geographique varchar(50),
+	PRIMARY KEY (remise_id),
 );
-
+/*
 CREATE TABLE D_local
 (
 	local_id number,
@@ -71,26 +72,24 @@ CREATE TABLE D_local
 	nbr_employes number,
 	nom_responsable varchar(15),
 	superficie number,
-	nbr_livreurs number,
+	nbr_remises number,
 	classement number,
 	PRIMARY KEY (local_id),
 );
-
-CREATE TABLE D_plateau
+*/
+CREATE TABLE D_produit
 (
-	plateau_id number,
+	produit_id number,
 	nom varchar(15),
-	type_pain varchar(15),
-	type_vin varchar(15),
-	type_charcuterie varchar(15),
-	type_fromage varchar(15),
-	prix_pain number,
-	prix_vin number,
-	prix_charcuterie number,
-	prix_fromage number,
-	prix_total number,
-	allergies varchar(50),
-	PRIMARY KEY (plateau_id),
+	description varchar(15),
+	category varchar(15),
+	type varchar(15),
+	fournisseur varchar(15),
+	matiere_grasse number,
+	poids_unitaire number,
+	emballage varchar(15),
+	prix_unitaire number,
+	PRIMARY KEY (produit_id),
 );
 
 --Script de création de D_Date pris de http://www.ipcdesigns.com/dim_date/ -Fiabilité incertaine, à revoir ^^'
