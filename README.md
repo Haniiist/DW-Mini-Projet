@@ -15,7 +15,7 @@ Entrepôt de données, produits du terroir.
         - Voir pour l'utilisation des vues / "role-playing"
     - Réalisation
         - Implémenter notre modèle corrigé (Créations).
-        - Peupler l'entrepôt par quelques insertions.
+        - Peupler l'entrepôt avec quelques insertions.
         - Faire les requêtes à partir des traitements.
         - Interroger notre base avec nos requêtes.
 
