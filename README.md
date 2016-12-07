@@ -4,11 +4,13 @@ Entrepôt de données, produits du terroir.
 ## A faire
 - Structure du rapport (Fait par @MonsieurOenologue)
 - Répondre aux questions
-    - Conception
-        - Résoudre le problème des dimensions
+    - Conception (Voir fichier Conception)
+        - Identifying the business process (Ce qu'ils appellent Actions/opérations) (Fait par @Haniiist)
+        - Modification de la granularité du modèle (Fait par @Haniiist)
+        - Résoudre le problème des dimensions 
         - Penser les tables ponts (@Haniiist)
+        - Refaire les schémas en étoile (@Haniiist)
         - Voir pour l'utilisation des vues
-        - Refaire les schémas en étoile
     - Réalisation
         - Implémenter notre modèle corrigé
         - Faire les requêtes
