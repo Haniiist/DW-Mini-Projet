@@ -80,6 +80,6 @@ Les bridge tables servent à gérer les versioning des valeurs qui changent rég
 Quelques idées de traitements seraient :  
 
 - Quelle est la quantitée de produit x dans l'entrepot y, tel mois. 
-- Quels sont les mois ou le stocks de la catégorie fromage s'épuise.
+- Quels sont les mois ou le stock de la catégorie fromage s'épuise.
 
 	
