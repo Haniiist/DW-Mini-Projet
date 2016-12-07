@@ -16,7 +16,10 @@ Une ligne crée / produit commandé ( Within a set of orders / Parmis un ensembl
 -Datamart2 : 
 Periodical (Daily/weekly/monthly ?) snapshots of products present in the warehouse.
 
+##Vues et dimensions partagées : 
+Le fait de référencer la même table passe par la création de vues indépendantes (Avec des nom de colonnes uniques)...On appelle ça Role-playing.
 #Vente Business Process/ DATAMART 1 : 
+
 ##Table de faits Vente et mesures :
 - Attributs : 
 
