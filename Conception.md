@@ -32,7 +32,19 @@ Periodical (Daily/monthly ?) snapshots of products present in the warehouse.
 - Client
 - Produit
 - Date
-- Remise
+- Remise (Inclure un tuple unique "Pas de promotion")
+
+##Traitements: 
+Quelques idées de traitements pour la nouvelle dimension (: Remise/promotion) seraient :  
+
+- Efficacité des remises : 
+
+	- les bénéfices hébdomadaires de la charcuterie faits auprès des clients de Montpellier, avec la remise Fin_d'année, durant le mois de Décembre 2015.(A comparer avec les résultats d'une requête visant une période ne proposant pas de remise).
+	- Les ventes d'un produit ont-ils significativement baissé juste après la fin d'une promotion donnée.
+	- Les produit en promotion quelconque qui ne se sont pas mieux vendus en région parisienne, durant le mois de Mai 2016.
+
+
+
 
 ##Allergies/Tables ponts: 
 
@@ -40,4 +52,4 @@ Ce que je comprend pour l'instant :
 
 Les bridge tables servent à gérer les versioning des valeurs qui changent régulièrement.
 
-- Backup solution : Si jamais on ne réussit pas à implémenter les bridge point, on devra limiter le nombre d'allergies possibles et prévoir par exemple 3 champs d'allergies
+- Backup solution : Si jamais on ne réussit pas à implémenter les bridge tables, on devra limiter le nombre d'allergies possibles et prévoir par exemple 3 champs d'allergies
