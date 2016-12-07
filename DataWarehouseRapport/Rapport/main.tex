@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[english,francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{bookmark,hyperref}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage[toc]{glossaries}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{float}
+
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=30mm,
+ bottom=20mm,
+}
+
+\begin{document}
+
+    %Page de garde
+    \input{garde}
+
+    %Génération automatique de la table des matières, de la liste des figures et de la liste des tableaux
+    \tableofcontents
+    \listoffigures
+    \clearpage
+
+    \include{introduction}
+    \include{traitements}
+    \include{conception}
+    \include{realisation}
+    \include{conclusion}
+
+
+\end{document}
