@@ -10,11 +10,13 @@ Entrepôt de données, produits du terroir.
         - Modification de la granularité du modèle (Fait par @Haniiist)
         - Décider des traitements à faire (Textuellement)
         - Résoudre le problème des dimensions 
-        - Penser les tables ponts (@Haniiist)
-        - Refaire les schémas en étoile (@Haniiist)
+        - Penser les tables ponts (Fait par @Haniiist)
+        - Refaire les schémas en étoile (1/2 Fait par @Rudy)
         - Voir pour l'utilisation des vues / "role-playing"
     - Réalisation
-        - Implémenter notre modèle corrigé (Créations).
+        - Implémenter notre modèle corrigé (Création tables).
+        - Implémenter la table pont.
+        - Implémenter les vues.
         - Peupler l'entrepôt avec quelques insertions.
         - Faire les requêtes à partir des traitements.
         - Interroger notre base avec nos requêtes.
