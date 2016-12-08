@@ -33,7 +33,7 @@ CREATE TABLE F_commande
 	remise_id number,
 	client_id number,
 	date_id number,
-	plateforme_id,
+	plateforme_id number,
 	plateau_code number,
 	prix_vente number,
 	cout_reel number,
@@ -82,9 +82,9 @@ CREATE TABLE D_allergie
 	allergie_id number,
 	description varchar(15),
 	age_debut number,
-	/--gravite number,
+	gravite number,
 	allergene varchar(15),
-	/--risques varchar(50),
+	risques varchar(50),
 	PRIMARY KEY (allergie_id),
 	CONSTRAINT fkey_bridge_id FOREIGN KEY (allergie_id) REFERENCES D_clientAllergieBridge(allergie_id)
 );
