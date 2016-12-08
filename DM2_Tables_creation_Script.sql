@@ -17,7 +17,7 @@ CREATE TABLE F_stock
 	date_id number,
 	quantite number,
 	capacite_restante number,
-	PRIMARY KEY (produit_id,plateau_code);
+	PRIMARY KEY (produit_id,plateau_code),
 	CONSTRAINT fkey_produit_id FOREIGN KEY (produit_id) REFERENCES D_prodForStocks(vs_produit_id),
 	CONSTRAINT fkey_entrepot_id FOREIGN KEY (entrepot_id) REFERENCES D_entrepot(entrepot_id),
 	CONSTRAINT fkey_date_id FOREIGN KEY (date_id) REFERENCES D_dateForStocks(vs_date_id)
@@ -42,7 +42,7 @@ CREATE TABLE D_entrepot
 	nom_responsable varchar(15),
 	superficie number,
 	classement number,
-	PRIMARY KEY (local_id),
+	PRIMARY KEY (local_id)
 )
 
 

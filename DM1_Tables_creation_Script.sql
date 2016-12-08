@@ -33,7 +33,7 @@ CREATE TABLE F_commande
 	remise_id number,
 	client_id number,
 	date_id number,
-	plateau_code number
+	plateau_code number,
 	prix_vente number,
 	cout_reel number,
 	benefice_net number,
@@ -62,7 +62,7 @@ CREATE TABLE D_client
 	date_naissance Date,
 	date_inscription Date,
 	sexe varchar(1),
-	PRIMARY KEY (client_id),
+	PRIMARY KEY (client_id)
 
 );
 CREATE TABLE D_clientAllergieBridge
@@ -98,7 +98,7 @@ CREATE TABLE D_remise
 	date_fin Date,
 	frequence_annuelle number,
 	portee_geographique varchar(50),
-	PRIMARY KEY (remise_id),
+	PRIMARY KEY (remise_id)
 );
 
 CREATE TABLE D_produit
@@ -113,7 +113,7 @@ CREATE TABLE D_produit
 	poids_unitaire number,
 	emballage varchar(15),
 	prix_unitaire number,
-	PRIMARY KEY (produit_id),
+	PRIMARY KEY (produit_id)
 );
 
 --Script de création de D_Date pris de http://www.ipcdesigns.com/dim_date/ -Fiabilité incertaine, à revoir ^^'
