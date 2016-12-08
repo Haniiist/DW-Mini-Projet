@@ -12,12 +12,14 @@ Entrepôt de données, produits du terroir.
         - Résoudre le problème des dimensions 
         - Penser les tables ponts (Fait par @Haniiist)
         - Refaire les schémas en étoile (2/2 Faits par @Rudy)
-        - Voir pour l'utilisation des vues / "role-playing"
+        - Voir pour l'utilisation des vues / "role-playing"(Fait par @Haniiist)
     - Réalisation
-        - Implémenter notre modèle corrigé (Création tables).
+        - Création tables DM1 (Fait par @Haniiist).
+        - Création tables DM2 (Fait par @Haniiist).
         - Implémenter la table pont (Fait par @Haniiist).
-        - Implémenter les vues.
+        - Implémenter les vues(Fait par @Haniiist).
         - Peupler l'entrepôt avec quelques insertions(@ Yas).
+        - Tester/Implémenter le modèle.
         - Faire les requêtes à partir des traitements.
         - Interroger notre base avec nos requêtes.
 
