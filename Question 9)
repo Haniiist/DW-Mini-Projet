@@ -1,0 +1,25 @@
+\section{Réalisation}
+\newline
+Question 9 : Notre entrepôt de données ne possède pas de très large dimension, donc ce n'est pas nécessaire de faire un partionnement ou de normalisation.
+\newline
+a) Attributs qui peuvent changer :
+
+	TABLE D_produit :
+		- fournisseur
+		- poids_unitaire
+		- prix_unitaire
+		- provenance
+
+	TABLE D_remise :
+		- public_cible
+		- pourcentage
+		- frequence_annuelle
+		- portee_geographique
+
+	TABLE F_stock
+		- quantite
+		- capacite_restante
+
+	TABLE D_entrepot
+		- nbr_employes
+		- classement
