@@ -36,12 +36,11 @@ CREATE TABLE D_entrepot
 	nom varchar(15),
 	region varchar(15),
 	adresse varchar(50),
-	code_postal varchar(5),
+	code_postal number,
 	capacite_stockage number,
 	nbr_employes number,
 	nom_responsable varchar(15),
 	superficie number,
-	classement number,
 	PRIMARY KEY (local_id)
 )
 

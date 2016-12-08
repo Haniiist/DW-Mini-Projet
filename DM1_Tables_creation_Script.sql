@@ -37,7 +37,7 @@ CREATE TABLE F_commande
 	prix_vente number,
 	cout_reel number,
 	benefice_net number,
-	PRIMARY KEY (produit_id,plateau_code);
+	PRIMARY KEY (produit_id,plateau_code),
 	CONSTRAINT fkey_produit_id FOREIGN KEY (produit_id) REFERENCES D_prodForComm(vc_produit_id),
 	CONSTRAINT fkey_remise_id FOREIGN KEY (remise_id) REFERENCES D_remise(remise_id),
 	CONSTRAINT fkey_client_id FOREIGN KEY (client_id) REFERENCES D_client(client_id),
@@ -80,9 +80,9 @@ CREATE TABLE D_allergie
 	allergie_id number,
 	description varchar(15),
 	age_debut number,
-	gravite number,
+	/--gravite number,
 	allergene varchar(15),
-	risques varchar(50),
+	/--risques varchar(50),
 	PRIMARY KEY (allergie_id),
 	CONSTRAINT fkey_bridge_id FOREIGN KEY (allergie_id) REFERENCES D_clientAllergieBridge(allergie_id)
 );
@@ -92,7 +92,7 @@ CREATE TABLE D_remise
 	remise_id number,
 	description varchar(15),
 	code varchar(15),
-	publique varchar(50),
+	public varchar(50),
 	pourcentage number,
 	date_debut Date,
 	date_fin Date,
@@ -113,7 +113,21 @@ CREATE TABLE D_produit
 	poids_unitaire number,
 	emballage varchar(15),
 	prix_unitaire number,
+	provenance varchar(30),
 	PRIMARY KEY (produit_id)
+);
+
+CREATE TABLE D_plateforme
+(	
+	plateforme_id number,
+	plateforme varchar(30),
+	cout number,
+	nom varchar(30),
+	description varchar(50),
+	date_creation date,
+	nombre_inscrit number,
+	date_miseajour date,
+	PRIMARY KEY (plateforme_id)
 );
 
 --Script de création de D_Date pris de http://www.ipcdesigns.com/dim_date/ -Fiabilité incertaine, à revoir ^^'

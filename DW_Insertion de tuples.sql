@@ -10,13 +10,13 @@ INSERT INTO F_commande VALUES(
 
 
 INSERT INTO D_client VALUES(
-	1, 'Tonneau', 'Mathieu', 'Montpellier', 34000, 06123456, '16/02/1984', '13/09/2011', 'M');
+	1, 'Tonneau', 'Mathieu', 'Montpellier', 34000, 06123456, '16/02/1984', '13/09/2011', '1');
 
 INSERT INTO D_client VALUES(
-	2, 'Bruges', 'Jon', 'Londres', 124, 02079460777, '24/05/1990', '15/12/2015', 'M');
+	2, 'Bruges', 'Jon', 'Marseille', 124, 02079460777, '24/05/1990', '15/12/2015', '1');
 
 INSERT INTO D_client VALUES(
-	3, 'Richard', 'Julie', 'Paris', 75015, 0607815637, '03/11/1972', '11/06/2009', 'F');
+	3, 'Richard', 'Julie', 'Paris', 75015, 0607815637, '03/11/1972', '11/06/2009', '2');
 
 
 
