@@ -61,7 +61,7 @@ CREATE TABLE D_client
 	num_tel number,
 	date_naissance Date,
 	date_inscription Date,
-	sexe varchar(1),
+	sexe number,
 	PRIMARY KEY (client_id)
 
 );
@@ -79,7 +79,7 @@ CREATE TABLE D_allergie
 (
 	allergie_id number,
 	description varchar(15),
-	age_debut varchar(30),
+	age_debut number,
 	gravite number,
 	allergene varchar(15),
 	risques varchar(50),
@@ -93,7 +93,7 @@ CREATE TABLE D_remise
 	description varchar(15),
 	code varchar(15),
 	publique varchar(50),
-	pourcentage varchar(12),
+	pourcentage number,
 	date_debut Date,
 	date_fin Date,
 	frequence_annuelle number,
