@@ -1,0 +1,9 @@
+Traitements : 
+
+-	On cherche à savoir quel fromage est le plus vendu dans le sud est de la france qui peuvent être mangé par des clients allergique au produit X
+-	On veut savoir quel duo vin-charcuterie est le plus vendu en france, afin de pourvoir faire une remise dessus
+-	On veut chercher les clients résidant en région parisienne qui ont déjà une remise actuellement active afin de ne pas leur en offrir une 2ème
+-	On cherche à savoir quel est la région ou la clientèle est le plus importante, et celle qui est le moins importante, afin de faire des remises sur ces regions
+-	On veut savoir quel plateforme est la plus utilisée parmis nos clients
+-	On cherche à savoir quel produit a été vendu le plus pour chaque région et pour chaque produit, afin de définir des box promotionnels
+-	 
