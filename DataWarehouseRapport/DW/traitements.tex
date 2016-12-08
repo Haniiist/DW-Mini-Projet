@@ -3,13 +3,13 @@
 \paragraph{} Les données que nous aurons besoin de stocker dans l’entrepôt concernent : 
 
 \begin{itemize}
-    \item Les plateaux commandés : Ceux-ci sont stockés dans la table repas de notre base de données.
-    \item Clients ayant passé des commandes de plateaux : Tuples de la table Client.
+    \item Les produits commandés : Ceux-ci sont stockés dans la table repas de notre base de données.
+    \item Clients ayant passé des commandes de produits : Tuples de la table Client.
     \item Date : Il s’agit de la dimension temps (Jour, mois, années) permettant de poser un suivi des activités du business à travers le temps.
 \end{itemize}
 
 \paragraph{} Afin de permettre des analyses plus détaillées, nous choisissons d’étendre le modèle du premier projet en ajoutant les notions de Fournisseur et du Local. Pour souligner l’hétérogénéité des données des entrepôts nous supposons que ces ajouts proviennent de sources de données différentes ;
-\newline
+\newlinef
 \textbf{Attention : les éléments suivants sont déprécies depuis les derniers changements dans la conception.}
 \begin{itemize}
     \item Livreur : Informations relatives aux livreurs de produits du terroir.
@@ -29,10 +29,10 @@ Pour parvenir à des stratégies cohérentes et prometteuses d’évolution, nou
             \item 2-Marketing : Afin d’améliorer les ventes et les chiffres d’affaire de l’entreprise, les idées suivantes sont proposées : 
                 \\
                 \begin{itemize}
-                    \item Création de menus (plateaux) formés des assortiments et associations des produits les plus populaires (couple, triplet de produits) auprès des clients par région et par saison.
+                    \item Création de menus (commandes) formés des assortiments et associations des produits les plus populaires (couple, triplet de produits) auprès des clients par région et par saison.
                     \item Proposer des offres d’abonnement/réductions aux clients les plus fidèles.
                     \item Création de menus à moindre prix pour une certaine tranche d’âge de clients.
-                    \item Création de menus (plateaux) formés des assortiments et associations des produits les plus populaires (couple, triplet de produits) auprès des clients par région et par saison.
+                    \item Création de menus (commandes) formés des assortiments et associations des produits les plus populaires (couple, triplet de produits) auprès des clients par région et par saison.
                     \item Proposer des offres d’abonnement/réductions aux clients les plus fidèles.
                     \item Création de menus à moindre prix pour une certaine tranche d’âge de clients.
                 \end{itemize}
@@ -48,9 +48,10 @@ L’équipe des stocks suggère également d’identifier les produits les plus 
 
 \newpage 
 \subsection{Requêtes analytiques} 
-\textbf{Operation optimisation gain :}
+\textbf{Attention : certains de ces traitements ne sont plus valides dû aux changement dans le modèle effectués suite aux remarque de l\'encadrant, voir la partie réalisation pour les nouveaux traitements}
+\textbf{Operation optimisation gain}
 \begin{itemize}
-    \item Quelles sont les villes ayant le moins d’habitants qui ont déjà commandé un plateau repas ? (Ou les villes dont les habitants n’ont jamais commandé de plateaux repas)
+    \item Quelles sont les villes ayant le moins d’habitants qui ont déjà commandé ? (Ou les villes dont les habitants n’ont jamais commandé de produits)
     \item Quels sont les produits les moins commandés par régions ? 
     \item Quels sont les produits les plus souvent associés dans une commande ?
     \item Quels sont les produits commandés par les clients ayant un âge compris dans une certaine tranche ?
@@ -59,7 +60,7 @@ Quels sont les clients effectuant des commandes régulièrement (Tous les x jour
     \item Quels sont les fournisseurs dont les produits sont les plus appréciés par région ?
 \end{itemize}
 
-\textbf{Opération optimisation stockage :}
+\textbf{Opération optimisation stockage}
 \begin{itemize}
     \item Quels sont les produits disponibles dans un local donné ?
     \item Quel jour un local de stockage donné a été saturé ? \item Quelle est la capacité restante (aujourd’hui) d’un local donné ?
@@ -68,7 +69,7 @@ Quels sont les clients effectuant des commandes régulièrement (Tous les x jour
 \paragraph {Ordre d'importance des opérations} 
 
 \begin{itemize}
-    \item a)-Commandes/Ventes de plateau
+    \item a)-Commandes/Ventes de produits
     \item c)-Approvisionnement et Stockage
     \item b)-Ouverture de nouveaux locaux de stockage
 \end{itemize}
