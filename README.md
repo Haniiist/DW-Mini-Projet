@@ -8,8 +8,8 @@ Entrepôt de données, produits du terroir.
     - Conception (Voir fichier Conception)
         - Identifying the business process (Ce qu'ils appellent Actions/opérations) (Fait par @Haniiist)
         - Modification de la granularité du modèle (Fait par @Haniiist)
-        - Décider des traitements à faire (Textuellement)
-        - Résoudre le problème des dimensions 
+        - Décider des traitements à faire (Textuellement) (@Rudy
+        - Résoudre le problème des dimensions (@everyone)
         - Penser les tables ponts (Fait par @Haniiist)
         - Refaire les schémas en étoile (2/2 Faits par @Rudy)
         - Voir pour l'utilisation des vues / "role-playing"(Fait par @Haniiist)
@@ -19,9 +19,9 @@ Entrepôt de données, produits du terroir.
         - Implémenter la table pont (Fait par @Haniiist).
         - Implémenter les vues(Fait par @Haniiist).
         - Peupler l'entrepôt avec quelques insertions(@ Yas).
-        - Tester/Implémenter le modèle.
-        - Faire les requêtes à partir des traitements.
-        - Interroger notre base avec nos requêtes.
+        - Tester/Implémenter le modèle. (Oracle is broken, impossible to do :/)
+        - Faire les requêtes à partir des traitements. (Oracle is broken)
+        - Interroger notre base avec nos requêtes. (Oracle is broken)
 
 ## Disclaimer
 Ce projet s'inscrit dans la continuité du projet de base de données orientées OR.
