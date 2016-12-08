@@ -16,6 +16,50 @@ Traitements :
     \item Inversement, on cherches les produits les plus vendus par type, afin d'augmenter notre stock de ces produits.
 \end{itemize}
 
-12.
+    \begin{figure}[h]
+        \centerline{\includegraphics[scale=0.3]{Constelation.png}}
+        \caption{Constellation de Datamarts}
+        \label{fig:UML}
+    \end{figure}
+    
+\subsection{Surrogate keys}
+\paragraph{} Etant donné que l’utilisation des clés artificielles (Surrogate keys) est conseillée pour les tables dimensions. Nous avons choisi d’identifier les tuples insérés de façon incrémentale, en créant et utilisant des séquences pour l’insertion dans chaque table.
 
-13.
+    \begin{figure}[h]
+        \centerline{\includegraphics[scale=0.7]{Surrogate.png}}
+        \caption{Surrogate keys}
+        \label{fig:UML}
+    \end{figure}
+
+    
+\subsection{Bridge tables (Multivaluated attributes)}
+\paragraph{} Un attribut multi-valué est un attribut qui peut avoir plusieurs valeurs pour un seul tuple. Une occurrence de ce type d’attribut apparaît dans notre modèle, il s’agit de l’attribut allergie de la dimension "D\_client".
+\paragraph{} Afin de gérer la multiplicité des valeurs possibles de l’attribut "allergie", nous avons dû faire intervenir une table pont (Bridge table) liant la dimension "D\_client" et la table allergie nouvellement créée.
+
+    \begin{figure}[h]
+        \centerline{\includegraphics[scale=0.9]{schemaBridge.png}}
+        \caption{Tables pont}
+        \label{fig:UML}
+    \end{figure}
+    
+    
+\subsection{Vues virtuelles (Role-playing)}
+\paragraph{} Étant donné que quelques dimensions sont partagées par les deux datamarts (en l’occurrence D\_produit et D\_date), les deux devront "jouer les rôles" de dimensions pour chacune des tables de faits des deux datamarts.
+
+    \begin{figure}[h]
+        \centerline{\includegraphics[scale=0.9]{screenTerm1.png}}
+        \caption{Creation de vues}
+        \label{fig:UML}
+    \end{figure}
+    
+\newpage
+
+\subsection{Problème d'insertion Oracle} 
+\paragraph{} Après l’étape de création des tables de faits et des dimensions des deux datamarts, nous avons malheureusement rencontré un problème que nous n’avons pas pu contourner lors des insertions de tuples dans les tables. La capture d’écran suivante montre le message d’erreur affiché à chaque tentative d’insertion.
+
+
+    \begin{figure}[h]
+        \centerline{\includegraphics[scale=0.7]{error.png}}
+        \caption{Erreur lors de l'insertion dans la base}
+        \label{fig:UML}
+    \end{figure}
