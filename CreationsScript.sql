@@ -204,4 +204,4 @@ fiscal_year_begin_date date NULL,
 fiscal_year_begin_date_key integer NULL,
 fiscal_year_end_date date NULL,
 fiscal_year_end_date_key integer NULL
-);
+)
