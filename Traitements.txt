@@ -1,13 +1,12 @@
 Traitements : 
 
--	On cherche à savoir quel fromage est le plus vendu dans le sud est de la France qui peuvent être mangé par des clients allergique au produit X
+-	On cherche à savoir quel fromage est le plus vendu dans le sud est de la France
 -	On veut savoir quel duo vin-charcuterie est le plus vendu en france, afin de pouvoir faire une remise dessus
 -	On veut chercher les clients résidant en région parisienne qui ont déjà une remise actuellement active afin de ne pas leur en offrir une 2ème
 -	On cherche à savoir quel est la région ou la clientèle est la plus importante, et celle qui est la moins importante, afin de faire des remises sur ces regions
 -	On veut savoir quel plateforme est la plus utilisée parmis nos clients
 -	On cherche à savoir quel produit a été vendu le plus pour chaque région et pour chaque produit, afin de définir des box promotionnels
 -	On cherche à savoir quel région a eu le plus de remise, afin de diminuer le nombre de ces dernières dans cette région
--	On cherche à savoir quelle(s) allergie(s) est(sont) la(es) plus répendu(s) dans notre clientèle, afin de gèrer la gestion de nos produits en fonction de ce(s) allergie(s)
 -	On cherche à savoir si notre clientèle est plutot vieille ou jeune afin de faire profiter d'une certaines remises pour ces tranches d'age
 -	On cherche les produits les moins vendus par type, afin de potentiellement les supprimer de notre menu
 -	Inversement, on cherches les produits les plus vendus par type, afin d'augmenter notre stock de ces produits.
