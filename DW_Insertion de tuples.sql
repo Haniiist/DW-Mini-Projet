@@ -72,3 +72,26 @@ INSERT INTO D_plateforme VALUES(
 
 INSERT INTO D_plateforme VALUES(
 	1, 'Téléphone', 80, NULL, 'Ligne téléponique pour des commandes', '15/06/2007', NULL, NULL);
+
+
+
+INSERT INTO F_stock VALUES(
+	1, 1, 1, 100000, 50000);
+
+INSERT INTO F_stock VALUES(
+	2, 2, 2, 65000, 35000);
+
+INSERT INTO F_stock VALUES(
+	3, 3, 3, 1000, 200);
+
+
+
+INSERT INTO D_entrepot VALUES(
+	1, 'Entrepot Montpellier', 'Languedoc-Roussillon', '25 route de carnon', 34000, 2000000, 50, 'Eric Moineau', 3000);
+
+INSERT INTO D_entrepot VALUES(
+	2, 'Entrepot Londres', 'Londres', '51 longstreet', 125, 1700000, 50, 'Matt Smith', 2400);
+
+INSERT INTO D_entrepot VALUES(
+	3, 'Entrepot Rome', 'Laium', '13 via cavour', 30161, 950000, 37, 'Mario Benelitti', 1650);
+
