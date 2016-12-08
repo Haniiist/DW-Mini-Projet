@@ -33,6 +33,7 @@ CREATE TABLE F_commande
 	remise_id number,
 	client_id number,
 	date_id number,
+	plateforme_id,
 	plateau_code number,
 	prix_vente number,
 	cout_reel number,
@@ -41,7 +42,8 @@ CREATE TABLE F_commande
 	CONSTRAINT fkey_produit_id FOREIGN KEY (produit_id) REFERENCES D_prodForComm(vc_produit_id),
 	CONSTRAINT fkey_remise_id FOREIGN KEY (remise_id) REFERENCES D_remise(remise_id),
 	CONSTRAINT fkey_client_id FOREIGN KEY (client_id) REFERENCES D_client(client_id),
-	CONSTRAINT fkey_date_id FOREIGN KEY (date_id) REFERENCES D_dateForComm(vc_date_id)
+	CONSTRAINT fkey_date_id FOREIGN KEY (date_id) REFERENCES D_dateForComm(vc_date_id),
+	CONSTRAINT fkey_plateforme_id FOREIGN KEY (plateforme_id) REFERENCES D_plateforme(platefome_id)
 );
 
 /*
