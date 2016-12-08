@@ -15,9 +15,9 @@ Entrepôt de données, produits du terroir.
         - Voir pour l'utilisation des vues / "role-playing"
     - Réalisation
         - Implémenter notre modèle corrigé (Création tables).
-        - Implémenter la table pont.
+        - Implémenter la table pont (Fait par @Haniiist).
         - Implémenter les vues.
-        - Peupler l'entrepôt avec quelques insertions.
+        - Peupler l'entrepôt avec quelques insertions(@ Yas).
         - Faire les requêtes à partir des traitements.
         - Interroger notre base avec nos requêtes.
 
