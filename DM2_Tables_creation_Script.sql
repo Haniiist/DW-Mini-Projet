@@ -43,6 +43,6 @@ CREATE TABLE D_entrepot
 	superficie number,
 	classement number,
 	PRIMARY KEY (local_id),
-);
+)
 
 
