@@ -11,7 +11,7 @@ Entrepôt de données, produits du terroir.
         - Décider des traitements à faire (Textuellement)
         - Résoudre le problème des dimensions 
         - Penser les tables ponts (Fait par @Haniiist)
-        - Refaire les schémas en étoile (1/2 Fait par @Rudy)
+        - Refaire les schémas en étoile (2/2 Faits par @Rudy)
         - Voir pour l'utilisation des vues / "role-playing"
     - Réalisation
         - Implémenter notre modèle corrigé (Création tables).
@@ -23,7 +23,7 @@ Entrepôt de données, produits du terroir.
 
 ## Disclaimer
 Ce projet s'inscrit dans la continuité du projet de base de données orientées OR.
-Lien vers le repo du premier projet : https://github.com/MonsieurOenologue/HMIN110-Powerimpress
+Lien vers le repo du premier projet : https://github.com/MonsieurOenologue/ProduitsDuBDD
 
 ## Goal
 Concevoir un entrepôt de données fiable et fonctionnel avec tuples et requêtes.
