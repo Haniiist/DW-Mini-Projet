@@ -43,8 +43,29 @@ CREATE TABLE D_client
 	date_naissance Date,
 	date_inscription Date,
 	sexe varchar(1),
-	allergies varchar(50),
 	PRIMARY KEY (client_id),
+
+);
+CREATE TABLE D_clientAllergieBridge
+(
+	bridge_id number,
+	client_id number,
+	allergies_id number,
+	weight number,
+	PRIMARY KEY (bridge_id),
+	CONSTRAINT fkey_client_id FOREIGN KEY (client_id) REFERENCES D_client(client_id)
+);
+
+CREATE TABLE D_allergie
+(
+	allergie_id number,
+	description varchar(15),
+	age_debut number,
+	severite number,
+	allergene varchar(15),
+	risques varchar(50),
+	PRIMARY KEY (allergie_id),
+	CONSTRAINT fkey_bridge_id FOREIGN KEY (allergie_id) REFERENCES D_clientAllergieBridge(allergie_id)
 );
 
 CREATE TABLE D_remise
